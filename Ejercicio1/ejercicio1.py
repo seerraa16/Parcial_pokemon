@@ -22,4 +22,9 @@ class pokemon:
             return defensa
     def tipoArma():
         tipoArma = ["Puñetazo", "Patada", "Codazo", "Cabezazo"]
-        return tipoArma 
+        print ("Elige el tipo de arma: ")
+        arma = int(input("1. Puñetazo, 2. Patada, 3. Codazo, 4. Cabezazo: "))
+        if 1 <= arma <= 4:
+            return tipoArma[arma-1]
+        else:
+            print("Ingrese un valor entre 1 y 4")
