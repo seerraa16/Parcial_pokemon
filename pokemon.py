@@ -96,6 +96,11 @@ class Pokemon():
             return self.attack_rating
         elif not self.attack_rating == int:
             raise TypeError("The attack rating must be an integer.")
+    def get_defense_rating(self):
+        if self.defense_rating == int:
+            return self.defense_rating
+        elif not self.defense_rating == int:
+            raise TypeError("The defense rating must be an integer.")
     
 
 
