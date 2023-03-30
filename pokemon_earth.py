@@ -35,6 +35,7 @@ this Python class.
 
 from pokemon import Pokemon
 from weapon_type import WeaponType
+from pokemon import self
 
 class PokemonEarth(Pokemon): #hacemos la herencia de pokemon
     """Python class to implement a basic version of a Pokemon of the game.
@@ -77,6 +78,7 @@ class PokemonEarth(Pokemon): #hacemos la herencia de pokemon
     def defense_rating ():
         for defense_rating in range (11, 20):
             return defense_rating
+    self.defense_rating = defense_rating
 
         
 
