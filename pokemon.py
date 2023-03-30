@@ -77,31 +77,15 @@ class Pokemon():
         self.attack_rating = attack_rating
         self.defense_rating = defense_rating
     def get_pokemon_name(self):
-        if self.pokemon_name == str:
-            return self.pokemon_name
-        elif not self.pokemon_name == str:
-            raise TypeError("The pokemon name must be a string.")
+        return self.pokemon_name
     def get_weapon_type(self):
-        if self.weapon_type == WeaponType:
-            return self.weapon_type
-        elif not self.weapon_type == WeaponType:
-            raise TypeError("The weapon type must be a WeaponType.")
+        return self.weapon_type
     def get_health_points(self):
-        if self.health_points == int:
-            return self.health_points
-        elif not self.health_points == int:
-            raise TypeError("The health points must be an integer.")
+        return self.health_points
     def get_attack_rating(self):
-        if self.attack_rating == int:
-            return self.attack_rating
-        elif not self.attack_rating == int:
-            raise TypeError("The attack rating must be an integer.")
+        return self.attack_rating
     def get_defense_rating(self):
-        if self.defense_rating == int:
-            return self.defense_rating
-        elif not self.defense_rating == int:
-            raise TypeError("The defense rating must be an integer.")
-    
+        return self.defense_rating
 
 
 
