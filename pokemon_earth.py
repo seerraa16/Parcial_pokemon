@@ -36,7 +36,7 @@ this Python class.
 from pokemon import Pokemon
 from weapon_type import WeaponType
 
-class PokemonEarth():
+class PokemonEarth(Pokemon): #hacemos la herencia de pokemon
     """Python class to implement a basic version of a Pokemon of the game.
 
     This Python class implements the basic version of a Pokemon of the game.
