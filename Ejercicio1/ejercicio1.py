@@ -10,9 +10,9 @@ class pokemon:
 
         
         if not 1 <= salud <= 100:
-            raise ValueError("Health points must be between 1 and 100")
+            print("El valor de la salud deve ser entre 1 y 100")
         if not 1 <= ataque <= 10:
-            raise ValueError("Attack index must be between 1 and 10")
+            print("El ataque debe estar entre 1 y 10")
         if not 1 <= defensa <= 10:
-            raise ValueError("Defense index must be between 1 and 10")            
+            print("La defensa debe estar entre 1 y 10")
     
