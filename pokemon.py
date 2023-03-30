@@ -91,12 +91,12 @@ class Pokemon():
     def fight_defense(self, damage): #metodo para que el pokemon reciba daño
         self.health_points = self.health_points - damage #definimos la salud del pokemon tras sufrir un ataque
         if self.health_points < 0  : #si los puntos de vida son menores que 0, el pokemon muere
-         return self.health_points 
-            #pokemon muere
-    def __str__(self):
+            self.health_points = 0 # decimos que al ser menor que 0 su vida aparezca que es 0 y se de por muerto
+        return self.health_points 
+    def __str__(self): #Decimos cuales son los string y los escribimos
         return "Pokemon ID " + str(self.id) + " with name " + str(self.pokemon_name) + " has as weapon " + str(self.weapon_type.name) + " and health " + str(self.health_points)
-    def fight_attack(self, pokemon):
-        damage = self.attack_rating - pokemon.get_defense_rating()
+    def fight_attack(self, pokemon): #metodo para que el pokemon ataque a otro pokemon
+        damage = self.attack_rating - pokemon.get_defense_rating() #Definimos el daño que se comete
         if damage < 0:
             damage = 0
         pokemon.fight_defense(damage)
