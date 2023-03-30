@@ -70,8 +70,13 @@ class PokemonElectricity():
       >>> from weapon_type import WeaponType
       >>> obj_Pokemon = PokemonEarth(1, "Pikachu", WeaponType.PUNCH, 100, 7, 10)
     """
-    def __init__(self, ID, pokemon_name, weapon_type, health_points, attack_rating, defense_rating):
+    def __init__(self, Id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating):
+        super().__init__(Id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating)
 
+
+
+
+        
 def main():
     """Function main of the module.
 
