@@ -73,7 +73,10 @@ class PokemonEarth(Pokemon): #hacemos la herencia de pokemon
                  defense_rating):
         # Call the constructor of the parent class.
         super().__init__(id, pokemon_name, weapon_type, health_points,
-                         attack_rating, defense_rating)
+                         attack_rating, None)
+    def defense_rating ():
+
+        
 
 def main():
     """Function main of the module.
