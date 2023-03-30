@@ -59,7 +59,18 @@ class WeaponType():
     -------
       >>> from weapon_type import WeaponType
       >>> obj_WeaponType = WeaponType.Boxer
-    """
+  """
+    def __init__(self, punch, kick, elbow, headbutt):
+        self.PUNCH = punch
+        self.KICK = kick
+        self.ELBOW = elbow
+        self.HEADBUTT = headbutt
+        punch = 2
+        kick = 4
+        elbow = 6
+        headbutt = 10
+        
+    
 
 
 
