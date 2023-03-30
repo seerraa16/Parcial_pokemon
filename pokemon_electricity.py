@@ -73,6 +73,8 @@ class PokemonElectricity(Pokemon):
     def __init__(self, Id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating, fight_attack):
         super().__init__(Id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating, None)
         self.fight_attack = fight_attack
+
+        
     def fight_attack(self):
         azar = random.randint(1, 2)
         if azar == 1:
