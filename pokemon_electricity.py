@@ -33,6 +33,8 @@ this Python class.
 
 # Source packages.
 
+from weapon_type import WeaponType
+from pokemon import Pokemon
 
 
 class PokemonElectricity():
@@ -68,8 +70,7 @@ class PokemonElectricity():
       >>> from weapon_type import WeaponType
       >>> obj_Pokemon = PokemonEarth(1, "Pikachu", WeaponType.PUNCH, 100, 7, 10)
     """
-
-
+    def __init__(self, ID, pokemon_name, weapon_type, health_points, attack_rating, defense_rating):
 
 def main():
     """Function main of the module.
