@@ -33,7 +33,8 @@ this Python class.
 
 # Source packages.
 
-
+from pokemon import Pokemon
+from weapon_type import WeaponType
 
 class PokemonEarth():
     """Python class to implement a basic version of a Pokemon of the game.
