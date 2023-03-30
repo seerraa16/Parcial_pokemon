@@ -95,6 +95,15 @@ class Pokemon():
         self.health_points2 = self.health_points - damage
         if self.health_points2 < 0:
             self.health_points2 = 0
+        return self.health_points2
+    def __str__(self):
+        return "Pokemon ID " + str(self.id) + " with name " + str(self.pokemon_name) + " has as weapon " + str(self.weapon_type.name) + " and health " + str(self.health_points)
+    def fight_attack(self, pokemon):
+        damage = self.attack_rating - pokemon.get_defense_rating()
+        if damage < 0:
+            damage = 0
+        pokemon.fight_defense(damage)
+        return pokemon.get_health_points()
 
 
 
