@@ -87,12 +87,12 @@ class Pokemon():
     def get_defense_rating(self):
         return self.defense_rating
     def is_alive(self):
-        self.health_points2 = self.health_points
+        self.health_points = self.health_points
     def fight_defense(self, damage):
-        self.health_points2 = self.health_points - damage
-        if self.health_points2 < 0:
-            self.health_points2 = 0
-        return self.health_points2
+        self.health_points = self.health_points - damage
+        if self.health_points < 0:
+            self.health_points = 0
+        return self.health_points
     def __str__(self):
         return "Pokemon ID " + str(self.id) + " with name " + str(self.pokemon_name) + " has as weapon " + str(self.weapon_type.name) + " and health " + str(self.health_points)
     def fight_attack(self, pokemon):
