@@ -69,29 +69,29 @@ class Pokemon():
       >>> from weapon_type import WeaponType
       >>> obj_Pokemon = Pokemon(1, "Bulbasaur", WeaponType.PUNCH, 100, 7, 10)
     """
-    def __init__(self, id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating):
-        self.id = id
-        self.pokemon_name = pokemon_name
-        self.weapon_type = weapon_type
-        self.health_points = health_points
-        self.attack_rating = attack_rating
-        self.defense_rating = defense_rating
-    def get_pokemon_name(self):
+    def __init__(self, id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating): #enumeramos los atributos que tiene nuestra clase
+        self.id = id #id del pokemon
+        self.pokemon_name = pokemon_name #nombre del pokemon
+        self.weapon_type = weapon_type #tipo de arma que lleva el pokemon
+        self.health_points = health_points #puntos de vida del pokemon 
+        self.attack_rating = attack_rating #puntos de ataque del pokemon
+        self.defense_rating = defense_rating #puntos de defensa del pokemon
+    def get_pokemon_name(self): #metodo para obtener el nombre del pokemon
         return self.pokemon_name
-    def get_weapon_type(self):
+    def get_weapon_type(self): #metodo para obtener el tipo de arma del pokemon
         return self.weapon_type
-    def get_health_points(self):
+    def get_health_points(self): #metodo para obtener los puntos de vida del pokemon
         return self.health_points
     def get_attack_rating(self):
-        return self.attack_rating
+        return self.attack_rating #metodo para obtener los puntos de ataque del pokemon
     def get_defense_rating(self):
-        return self.defense_rating
-    def is_alive(self):
-        return self.health_points >0 
-    def fight_defense(self, damage):
-        self.health_points = self.health_points - damage
-        if self.health_points <= 0:
-            self.health_points = 0
+        return self.defense_rating #metodo para obtener los puntos de defensa del pokemon
+    def is_alive(self): #metodo para saber si el pokemon esta vivo o muerto
+        return self.health_points >0 #decimos que si los puntos de vida son mayores que 0, el pokemon esta vivo
+    def fight_defense(self, damage): #metodo para que el pokemon reciba daño
+        self.health_points = self.health_points - damage #definimos la salud del pokemon tras sufrir un ataque
+        if self.health_points < 0  : #si los puntos de vida son menores que 0, el pokemon muere
+         return self.health_points 
             #pokemon muere
     def __str__(self):
         return "Pokemon ID " + str(self.id) + " with name " + str(self.pokemon_name) + " has as weapon " + str(self.weapon_type.name) + " and health " + str(self.health_points)
