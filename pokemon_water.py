@@ -36,7 +36,7 @@ this Python class.
 
 from weapon_type import WeaponType  
 from pokemon import Pokemon
-class PokemonWater():
+class PokemonWater(Pokemon):
     """Python class to implement a basic version of a Pokemon of the game.
 
     This Python class implements the basic version of a Pokemon of the game.
