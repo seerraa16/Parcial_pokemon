@@ -34,6 +34,7 @@ this Python class.
 # Source packages.
 
 
+from weapon_type import WeaponType
 
 class Pokemon():
     """Python class to implement a basic version of a Pokemon of the game.
@@ -68,7 +69,34 @@ class Pokemon():
       >>> from weapon_type import WeaponType
       >>> obj_Pokemon = Pokemon(1, "Bulbasaur", WeaponType.PUNCH, 100, 7, 10)
     """
-
+    def __init__(self, id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating):
+        self.id = id
+        self.pokemon_name = pokemon_name
+        self.weapon_type = weapon_type
+        self.health_points = health_points
+        self.attack_rating = attack_rating
+        self.defense_rating = defense_rating
+    def get_pokemon_name(self):
+        if self.pokemon_name == str:
+            return self.pokemon_name
+        elif not self.pokemon_name == str:
+            raise TypeError("The pokemon name must be a string.")
+    def get_weapon_type(self):
+        if self.weapon_type == WeaponType:
+            return self.weapon_type
+        elif not self.weapon_type == WeaponType:
+            raise TypeError("The weapon type must be a WeaponType.")
+    def get_health_points(self):
+        if self.health_points == int:
+            return self.health_points
+        elif not self.health_points == int:
+            raise TypeError("The health points must be an integer.")
+    def get_attack_rating(self):
+        if self.attack_rating == int:
+            return self.attack_rating
+        elif not self.attack_rating == int:
+            raise TypeError("The attack rating must be an integer.")
+    
 
 
 
