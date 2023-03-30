@@ -75,7 +75,7 @@ class PokemonAir(Pokemon):
     def fight_defense(self, damage):
         azar = random.randint(1, 2)
         if azar == 1:
-            self._health_points -= damage
+            self._health_points = self._health_points - damage
             return True
         else:
             return False
