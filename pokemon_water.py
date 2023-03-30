@@ -34,7 +34,8 @@ this Python class.
 # Source packages.
 
 
-
+from weapon_type import WeaponType  
+from pokemon import Pokemon
 class PokemonWater():
     """Python class to implement a basic version of a Pokemon of the game.
 
@@ -68,6 +69,14 @@ class PokemonWater():
       >>> from weapon_type import WeaponType
       >>> obj_Pokemon = PokemonWater(1, "Squirtle", WeaponType.PUNCH, 100, 7, 10)
     """
+    def __init__(self, Id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating):
+        super().__init__(Id, pokemon_name, weapon_type, health_points, None, defense_rating)
+        self.attack_rating = attack_rating
+        if attack_rating <11 or attack_rating > 20:
+            self.attack_rating = attack_rating
+        else:
+            print("The attack rating must be between 11 and 20. The value has been set to 15.")
+
 
 
 def main():
