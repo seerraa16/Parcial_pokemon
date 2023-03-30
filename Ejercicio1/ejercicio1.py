@@ -6,3 +6,9 @@ class pokemon:
         self.salud = salud
         self.ataque = ataque
         self.defensa = defensa
+    def salud():
+        salud = 1 <= salud <= 100
+        return salud
+    def ataque():
+        ataque = 1 <= ataque <= 10
+        return ataque
