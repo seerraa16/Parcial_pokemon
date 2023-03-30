@@ -15,4 +15,6 @@ class pokemon:
             print("El ataque debe estar entre 1 y 10")
         if not 1 <= defensa <= 10:
             print("La defensa debe estar entre 1 y 10")
+        if not Id == int:
+            print("El Id debe ser un numero entero")
     
