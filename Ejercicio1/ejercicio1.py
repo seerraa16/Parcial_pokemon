@@ -12,3 +12,7 @@ class pokemon:
     def ataque():
         ataque = 1 <= ataque <= 10
         return ataque
+    def defensa(): 
+        defensa = 1 <= defensa <= 10
+        return defensa
+    
