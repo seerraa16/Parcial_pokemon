@@ -15,4 +15,6 @@ class pokemon:
     def defensa(): 
         defensa = 1 <= defensa <= 10
         return defensa
-    
+    def tipoArma():
+        tipoArma = ["Puñetazo", "Patada", "Codazo", "Cabezazo"]
+        return tipoArma 
