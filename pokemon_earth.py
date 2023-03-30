@@ -69,9 +69,9 @@ class PokemonEarth(Pokemon): #hacemos la herencia de pokemon
       >>> from weapon_type import WeaponType
       >>> obj_Pokemon = PokemonEarth(1, "Diglett", WeaponType.PUNCH, 100, 7, 10)
     """
-    def __init__(self, id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating):
+    def __init__(self, id, pokemon_name, weapon_type, health_points, attack_rating, fight_defense, defense_rating):
         # Call the constructor of the parent class.
-        super().__init__(id, pokemon_name, weapon_type, health_points, attack_rating, None)
+        super().__init__(id, pokemon_name, weapon_type, health_points, attack_rating, None, None)
         self.defense_rating = defense_rating
         if defense_rating < 11 or defense_rating > 20:
             self.defense_rating = defense_rating
