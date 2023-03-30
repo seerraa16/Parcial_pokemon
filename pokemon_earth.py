@@ -75,6 +75,8 @@ class PokemonEarth(Pokemon): #hacemos la herencia de pokemon
         super().__init__(id, pokemon_name, weapon_type, health_points,
                          attack_rating, None)
     def defense_rating ():
+        for defense_rating in range (11, 20):
+            return defense_rating
 
         
 
