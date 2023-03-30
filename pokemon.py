@@ -87,8 +87,7 @@ class Pokemon():
     def get_defense_rating(self):
         return self.defense_rating
     def is_alive(self):
-        self.health_points >0 
-        return True
+        return self.health_points >0 
     def fight_defense(self, damage):
         self.health_points = self.health_points - damage
         if self.health_points < 0:
