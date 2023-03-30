@@ -69,22 +69,27 @@ class PokemonEarth(Pokemon): #hacemos la herencia de pokemon
       >>> from weapon_type import WeaponType
       >>> obj_Pokemon = PokemonEarth(1, "Diglett", WeaponType.PUNCH, 100, 7, 10)
     """
-    def __init__(id, pokemon_name, weapon_type, health_points, attack_rating,
-                 defense_rating):
+    def __init__(self, id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating):
         # Call the constructor of the parent class.
-        super().__init__(id, pokemon_name, weapon_type, health_points,
-                         attack_rating, None)
-    def defense_rating ():
-        for defense_rating in range (11, 20):
-            return defense_rating
-    self.defense_rating = defense_rating
+        super().__init__(id, pokemon_name, weapon_type, health_points, attack_rating, None)
+        self.defense_rating = defense_rating
+        if defense_rating < 11 or defense_rating > 20:
+            self.defense_rating = defense_rating
+        else:
+            print("The defense rating must be between 11 and 20")
+
 
         
 
 def main():
     """Function main of the module.
 
-    The function main of this module is used to test the Class that is described
+    The function main of this module is used    def fight_attack(self, pokemon): #metodo para que el pokemon ataque a otro pokemon
+        damage = self.attack_rating - pokemon.get_defense_rating() #Definimos el daño que se comete
+        if damage < 0:
+            damage = 0
+        pokemon.fight_defense(damage)
+        return pokemon.get_health_points()to test the Class that is described
     in this module.
 
     Syntax
