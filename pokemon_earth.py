@@ -69,7 +69,11 @@ class PokemonEarth(Pokemon): #hacemos la herencia de pokemon
       >>> from weapon_type import WeaponType
       >>> obj_Pokemon = PokemonEarth(1, "Diglett", WeaponType.PUNCH, 100, 7, 10)
     """
-
+    def __init__(id, pokemon_name, weapon_type, health_points, attack_rating,
+                 defense_rating):
+        # Call the constructor of the parent class.
+        super().__init__(id, pokemon_name, weapon_type, health_points,
+                         attack_rating, defense_rating)
 
 def main():
     """Function main of the module.
