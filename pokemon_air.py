@@ -72,7 +72,13 @@ class PokemonAir(Pokemon):
     """
     def __init__(self, Id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating):
         super().__init__(Id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating)
-        
+    def fight_defense(self, damage):
+        azar = random.randint(1, 2)
+        if azar == 1:
+            self._health_points -= damage
+            return True
+        else:
+            return False
 
 def main():
     """Function main of the module.
