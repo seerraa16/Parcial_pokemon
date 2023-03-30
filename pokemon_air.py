@@ -71,11 +71,11 @@ class PokemonAir(Pokemon):
       >>> obj_Pokemon = PokemonEarth(1, "Pidgey", WeaponType.PUNCH, 100, 7, 10)
     """
     def __init__(self, Id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating, fight_defense):
-        super().__init__(Id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating, fight_defense)
+        super().__init__(Id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating,fight_defense)
     def fight_defense(self, damage):
         azar = random.randint(1, 2)
         if azar == 1:
-            super().fight_defense(damage)
+            self._health_points = self._health_points - damage
             return True
         else:
             return False
