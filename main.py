@@ -66,6 +66,14 @@ def get_data_from_user(name_file):
     -------
       >>> list_pokemons = get_data_from_user("file.csv")
     """
+    list_pokemons = []
+    with open(name_file) as file:
+        for line in file:
+            line = line.strip()
+            line = line.split(",")
+            list_pokemons.append(line)
+    return list_pokemons
+
 
 
 
