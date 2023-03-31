@@ -31,7 +31,12 @@ This Python method contains the application of the Game.
 
 
 # Source packages.
-
+from weapon_type import WeaponType
+from pokemon import Pokemon
+from pokemon_air import PokemonAir
+from pokemon_earth import PokemonEarth
+from pokemon_water import PokemonWater
+from pokemon_electricity import PokemonElectricity
 
 
 def get_data_from_user(name_file):
