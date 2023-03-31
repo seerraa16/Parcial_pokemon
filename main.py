@@ -102,7 +102,12 @@ def get_pokemon_in_a_list_of_pokemons(coach_to_ask, list_of_pokemons):
     -------
        >>> get_pokemon_in_a_list_of_pokemons(1, list_of_pokemons)
     """
-
+    def get_pokemon_in_a_list_of_pokemons(coach_to_ask, list_of_pokemons):
+        list_pokemons = []
+        for pokemon in list_of_pokemons:
+            if pokemon[0] == coach_to_ask:
+                list_pokemons.append(pokemon)
+        return list_pokemons
 
 
 def coach_is_undefeated(list_of_pokemons):
