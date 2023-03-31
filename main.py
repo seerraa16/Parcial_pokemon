@@ -37,6 +37,11 @@ from pokemon_air import PokemonAir
 from pokemon_earth import PokemonEarth
 from pokemon_water import PokemonWater
 from pokemon_electricity import PokemonElectricity
+from Data import coach_1__pokemos
+coach1 = coach_1__pokemos
+from Data import coach_2__pokemos
+coach2 = coach_2__pokemos 
+
 
 
 def get_data_from_user(name_file):
