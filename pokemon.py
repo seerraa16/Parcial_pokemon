@@ -96,10 +96,11 @@ class Pokemon():
     def __str__(self): #Decimos cuales son los string y los escribimos
         return "Pokemon ID " + str(self.id) + " with name " + str(self.pokemon_name) + " has as weapon " + str(self.weapon_type.name) + " and health " + str(self.health_points)
     def fight_attack(self, pokemon): #metodo para que el pokemon ataque a otro pokemon
-        damage = self.attack_rating - pokemon.get_defense_rating() #Definimos el daño que se comete
+        damage = self.attack_rating - pokemon.get_defense_rating()  #Definimos el daño que se comete
         if damage < 0:
             damage = 0
         pokemon.fight_defense(damage)
+        self.health_points = self.health_points - damage
         return pokemon.get_health_points()
 
 
