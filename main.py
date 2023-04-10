@@ -98,12 +98,12 @@ def get_pokemon_in_a_list_of_pokemons(coach_to_ask, list_of_pokemons):
     -------
        >>> get_pokemon_in_a_list_of_pokemons(1, list_of_pokemons)
     """
-    def get_pokemon_in_a_list_of_pokemons(coach_to_ask, list_of_pokemons):
-        list_pokemons = []
-        for pokemon in list_of_pokemons:
-            if pokemon[0] == coach_to_ask:
-                list_pokemons.append(pokemon)
-        return list_pokemons
+    list_of_pokemons_undefeated = []
+    for pokemon in list_of_pokemons:
+        if pokemon.is_undefeated():
+            list_of_pokemons_undefeated.append(pokemon)
+    return list_of_pokemons_undefeated
+
 
 
 def coach_is_undefeated(list_of_pokemons):
@@ -129,6 +129,9 @@ def coach_is_undefeated(list_of_pokemons):
     -------
        >>> coach_is_undefeated(list_of_pokemons)
     """
+  print("Que jugador quieres ser, 1 o 2?")
+  
+
 
 
 def main():
